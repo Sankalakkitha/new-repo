@@ -48,6 +48,7 @@ pipeline{
                 echo"Deploy the code to the production  environment "
             }
             post{
+                success{
                     emailtext(
                         to:"sanka.mapalagama@gmail.com",
                         subject:"Jenkin Build:${currentBuild.fullDisplayName}",
@@ -56,6 +57,8 @@ pipeline{
                         attachLog:true
 
                     )
+
+                }
 
             }
 
