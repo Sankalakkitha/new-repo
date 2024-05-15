@@ -53,7 +53,7 @@ pipeline{
                         to:"sanka.mapalagama@gmail.com",
                         subject:"Jenkin Build:${currentBuild.fullDisplayName}",
                         body:"""<p>Stage 'Stage Name' status ${currentBuild.result}</p>
-                        <p>check console output  at ${env.BUILD_URL}</p>"""
+                        <p>check console output  at ${env.BUILD_URL}</p>""",
                         attachLog:true
 
                     )
