@@ -49,7 +49,7 @@ pipeline{
             }
             post{
                 success{
-                    emailtext(
+                    emailext(
                         to:"sanka.mapalagama@gmail.com",
                         subject:"Jenkin Build:${currentBuild.fullDisplayName}",
                         body:"""<p>Stage 'Stage Name' status ${currentBuild.result}</p>
